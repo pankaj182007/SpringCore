@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list list-class="java.util.LinkedList" id="mybestfriends">
+        <value>pankaj</value>
+        <value>amit</value>
+        <value>rahul</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="myfee">
+        <entry key="java fee" value="12000"/>
+        <entry key="spring fee" value="120000"/>
+        <entry key="mysql fee" value="12000"/>
+    </util:map>
+
+<bean class="com.standaloneCollection.Person" name="person1">
+    <property name="friends" ref="mybestfriends"/>
+    <property name="fee" ref="myfee"/>
+</bean>
+</beans>
